@@ -32,8 +32,6 @@ with open('resources/tutorat_2024_2025.csv') as file:
             elif "bloc 2 | bloc 3" in row[4] and row[6] == "oui":
                 tutors_secu.append(row[3])
 
-print(tutors_secu)
-
 # Calculate the students per tutor for dev app
 sbt_devapp = len(tutored_list_devapp) // len(tutors_devapp)
 extra_students_devapp = len(tutored_list_devapp) % len(tutors_devapp)
@@ -42,11 +40,22 @@ extra_students_devapp = len(tutored_list_devapp) % len(tutors_devapp)
 sbt_secu = len(tutored_list_secu) // len(tutors_secu)
 extra_students_secu = len(tutored_list_secu) % len(tutors_secu)
 
+print('---')
+
+print(f'Total amount of students to tutor : {len(tutored_list_devapp) + len(tutored_list_secu)}')
+print(f'Total amount of tutors : {len(tutors_devapp) + len(tutors_secu)}')
+
+print('---')
+
 print(f'Dev App - Number of tutored students per tutor: {sbt_devapp}')
 print(f'Dev App - Number of extra students to distribute: {extra_students_devapp}')
 
+print('---')
+
 print(f'Secu - Number of tutored students per tutor: {sbt_secu}')
 print(f'Secu - Number of extra students to distribute: {extra_students_secu}')
+
+print('---')
 
 # Initialize the dictionaries with tutor keys
 for tutor in tutors_devapp:
@@ -87,4 +96,3 @@ with open('resources/tutorat_2425.json', 'w', encoding='utf-8') as json_file:
     json.dump(final_list, json_file, ensure_ascii=False, indent=4)
 
 #print(f'Tutor tab: {final_list}')
-
