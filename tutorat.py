@@ -14,13 +14,13 @@ tutored_list_secu = []
 
 seen = []
 
-# Read the CSV file
-with open('resources/tutorat_2024_2025.csv') as file:
+#Read the CSV file
+with open('resources/old_tutorat_2024_2025.csv') as file:
     reader = csv.reader(file, delimiter=";")
     
     for row in reader:
         
-        if "dev app" in row[0]:
+        if "dev app" in row[0] or "ai" in row[0]:
             if "bloc 1" in row[4] and row[5] == "oui":
                 tutored_list_devapp.append(row[3])
             elif "bloc 2 | bloc 3" in row[4] and row[6] == "oui":
@@ -83,8 +83,8 @@ distribute_students(tutored_list_secu, tutors_secu, secu_dictionary, sbt_secu)
 final_list['dev_app'] = dev_app_dictionary
 final_list['secu'] = secu_dictionary
 
-with open('resources/tutorat_2425.json', 'w') as json_file:
-    json.dump(final_list, json_file, indent=4)
+with open('resources/tutorat_2425.json', 'w', encoding='utf-8') as json_file:
+    json.dump(final_list, json_file, ensure_ascii=False, indent=4)
 
 #print(f'Tutor tab: {final_list}')
 

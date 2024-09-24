@@ -1,22 +1,22 @@
 {
     "dev_app": {
-        "T\u00e0mas_andrew_test_DA": [
+        "Tàmas_andrew_test_DA": [
             "JohnDoe_1_DA",
-            "JohnDoe_4_DA"
+            "JohnDoe_2_DA"
         ],
         "JohnDoe_3_DA": [
-            "JohnDoe_2_DA",
-            "JohnDo3_DA"
+            "JohnDo3_DA",
+            "JohnDoe_4_DA"
         ]
     },
     "secu": {
         "JohnDoe_2_S": [
-            "p4ulAndrews_S",
-            "JohnDoe_1"
+            "JohnDoe_1",
+            "JohnDoe_3_S"
         ],
         "JohnDoe_5_S": [
-            "JohnDoe_4_S",
-            "JohnDoe_3_S"
+            "p4ulAndrews_S",
+            "JohnDoe_4_S"
         ]
     }
 }
