@@ -15,7 +15,7 @@ tutored_list_secu = []
 seen = []
 
 #Read the CSV file
-with open('resources/old_tutorat_2024_2025.csv') as file:
+with open('resources/tutorat_2024_2025.csv') as file:
     reader = csv.reader(file, delimiter=";")
     
     for row in reader:
